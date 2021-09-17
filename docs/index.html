@@ -153,7 +153,23 @@ nb_path: "index.ipynb"
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">detr_ob</span> <span class="o">=</span> <span class="n">DETR</span><span class="p">(</span><span class="n">path</span><span class="o">/</span><span class="s1">&#39;test&#39;</span><span class="o">/</span><span class="s1">&#39;001407.jpg&#39;</span><span class="p">)</span>
 <span class="n">feature_extractr</span><span class="p">,</span> <span class="n">model</span> <span class="o">=</span> <span class="n">detr_ob</span><span class="o">.</span><span class="n">get_detr</span><span class="p">()</span>
 <span class="n">output</span> <span class="o">=</span> <span class="n">detr_ob</span><span class="o">.</span><span class="n">infer</span><span class="p">(</span><span class="n">feature_extractr</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span>
-<span class="n">output</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">output</span><span class="o">.</span><span class="n">pred_boxes</span>
 </pre></div>
 
     </div>
@@ -165,29 +181,10 @@ nb_path: "index.ipynb"
 
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/home/krsna/.local/lib/python3.8/site-packages/torch/nn/functional.py:718: UserWarning: Named tensors and all their associated APIs are an experimental feature and subject to change. Please do not use them for anything important until they are released as stable. (Triggered internally at  /pytorch/c10/core/TensorImpl.h:1156.)
-  return torch.max_pool2d(input, kernel_size, stride, padding, dilation, ceil_mode)
-/home/krsna/.local/lib/python3.8/site-packages/torch/_tensor.py:575: UserWarning: floor_divide is deprecated, and will be removed in a future version of pytorch. It currently rounds toward 0 (like the &#39;trunc&#39; function NOT &#39;floor&#39;). This results in incorrect rounding for negative values.
-To keep the current behavior, use torch.div(a, b, rounding_mode=&#39;trunc&#39;), or for actual floor division, use torch.div(a, b, rounding_mode=&#39;floor&#39;). (Triggered internally at  /pytorch/aten/src/ATen/native/BinaryOps.cpp:467.)
-  return torch.floor_divide(self, other)
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>DetrObjectDetectionOutput(loss=None, loss_dict=None, logits=tensor([[[-14.8240,  -0.7422,  -2.0375,  ...,  -8.6955,  -9.2951,   6.3519],
-         [-12.3239,   0.7649,  -3.4738,  ...,  -5.3037,  -1.2467,   6.9548],
-         [-14.7922,  -1.2780,  -2.3390,  ...,  -8.3583, -11.8777,   6.7950],
-         ...,
-         [-16.5524,  -1.1590, -10.7845,  ...,  -6.5104,  -5.0777,   9.5556],
-         [-16.6411,  -0.4054,  -6.7103,  ...,  -8.9679,  -5.4048,   8.1550],
-         [-16.5358,   0.2891,  -4.5525,  ...,  -4.0103,  -2.9580,   8.2184]]],
-       grad_fn=&lt;AddBackward0&gt;), pred_boxes=tensor([[[0.0312, 0.6896, 0.0470, 0.1512],
+<pre>tensor([[[0.0312, 0.6896, 0.0470, 0.1512],
          [0.4686, 0.6384, 0.0217, 0.0654],
          [0.1392, 0.8852, 0.1581, 0.2278],
          [0.5187, 0.6178, 0.0255, 0.0928],
@@ -286,21 +283,7 @@ To keep the current behavior, use torch.div(a, b, rounding_mode=&#39;trunc&#39;)
          [0.0779, 0.6372, 0.0834, 0.0733],
          [0.8622, 0.4802, 0.2745, 0.3325],
          [0.5740, 0.5695, 0.8270, 0.8567],
-         [0.5199, 0.6161, 0.0286, 0.1010]]], grad_fn=&lt;SigmoidBackward&gt;), auxiliary_outputs=None, last_hidden_state=tensor([[[-0.0698, -0.2584, -1.1181,  ...,  0.9847,  2.7044, -0.7084],
-         [ 0.0175, -0.8082, -1.4722,  ...,  1.2975,  2.3605,  0.0965],
-         [-1.1387, -1.0179, -1.8222,  ...,  0.6666,  2.7633, -0.4967],
-         ...,
-         [-0.3910, -1.2921, -1.5683,  ..., -0.1486,  2.1964,  1.0950],
-         [ 0.5154, -0.8946, -0.0423,  ...,  0.0679,  2.0245, -0.3335],
-         [-0.5360, -0.5188, -1.2779,  ...,  0.6636,  2.6419,  0.5057]]],
-       grad_fn=&lt;NativeLayerNormBackward&gt;), decoder_hidden_states=None, decoder_attentions=None, cross_attentions=None, encoder_last_hidden_state=tensor([[[-0.0561, -0.0472, -0.0061,  ...,  0.0328, -0.1059, -0.0991],
-         [-0.0558, -0.0326, -0.0105,  ...,  0.1269, -0.0841, -0.1257],
-         [-0.0579, -0.0256, -0.0081,  ...,  0.1082, -0.0875, -0.2814],
-         ...,
-         [ 0.0375, -0.0042,  0.0181,  ..., -0.3585, -0.6289, -0.2859],
-         [ 0.0655, -0.0017,  0.0239,  ..., -0.1873, -0.4184, -0.2461],
-         [ 0.0334, -0.0064,  0.0224,  ..., -0.3931, -0.2752,  0.0213]]],
-       grad_fn=&lt;NativeLayerNormBackward&gt;), encoder_hidden_states=None, encoder_attentions=None)</pre>
+         [0.5199, 0.6161, 0.0286, 0.1010]]], grad_fn=&lt;SigmoidBackward&gt;)</pre>
 </div>
 
 </div>
