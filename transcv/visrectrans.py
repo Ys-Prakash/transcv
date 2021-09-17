@@ -115,11 +115,8 @@ def trunc_normal_(layer, param, mean=0., std=1., a=-2., b=2.):
 # Cell
 class VisRecTrans :
     """Class for setting up a vision transformer for visual recognition.
-
-    Attributes :
-        model_name : The name of the model
-        num_classes : The number of classes to output
-        pretrained : Outputs a pretrained model if set to True (by-default), or, a model with random weights if set to False.
+    Returns a pretrained custom ViT model for the given `model_name` and `num_classes`, by default, or, with randomly initialized parameters, if `pretrained`
+    is set to False.
     """
 
     models_list = ['vit_large_patch16_224', 'vit_large_patch16_224_in21k', 'vit_huge_patch14_224_in21k', 'vit_small_patch16_224', 'vit_small_patch16_224_in21k']
@@ -159,12 +156,9 @@ class VisRecTrans :
         return custom_ViT(self.model_name, self.num_patches, self.embed_dim, self.ni, self.num_classes, self.pretrained)
 
     def initialize (self, model) :
-        """Mthod for initializing the model. This method uses truncated normal distribution for
+        """Mthod for initializing the given `model`. This method uses truncated normal distribution for
         initializing the position embedding as well as the class token, and, kaiming normal
         distribution for the initializing the head of the model.
-
-        Attributes :
-            model : The model to be initialized
         """
         trunc_normal_(model[1], 'cls_tokens')
         trunc_normal_(model[1], 'pos_embeds')

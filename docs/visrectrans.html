@@ -6,8 +6,8 @@ title: VisRecTrans
 keywords: fastai
 sidebar: home_sidebar
 
-summary: "API details."
-description: "API details."
+summary: "A API for creating a custom <a href='https://arxiv.org/abs/2010.11929'>Vision Transformer (ViT)</a> model for visual recognition, that can be used with the `Learner` API of fastai."
+description: "A API for creating a custom <a href='https://arxiv.org/abs/2010.11929'>Vision Transformer (ViT)</a> model for visual recognition, that can be used with the `Learner` API of fastai."
 nb_path: "00_visrectrans.ipynb"
 ---
 <!--
@@ -42,11 +42,9 @@ nb_path: "00_visrectrans.ipynb"
 <div class="output_markdown rendered_html output_subarea ">
 <h2 id="VisRecTrans" class="doc_header"><code>class</code> <code>VisRecTrans</code><a href="https://github.com/Ys-Prakash/transcv/tree/master/transcv/visrectrans.py#L116" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>VisRecTrans</code>(<strong><code>model_name</code></strong>, <strong><code>num_classes</code></strong>, <strong><code>pretrained</code></strong>=<em><code>True</code></em>)</p>
 </blockquote>
-<p>Class for setting up a vision transformer for visual recognition.</p>
-<p>Attributes :
-    model_name : The name of the model
-    num_classes : The number of classes to output
-    pretrained : Outputs a pretrained model if set to True (by-default), or, a model with random weights if set to False.</p>
+<p>Class for setting up a vision transformer for visual recognition.
+Returns a pretrained custom ViT model for the given <code>model_name</code> and <code>num_classes</code>, by default, or, with randomly initialized parameters, if <code>pretrained</code>
+is set to False.</p>
 
 </div>
 
@@ -76,7 +74,7 @@ nb_path: "00_visrectrans.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="VisRecTrans.create_model" class="doc_header"><code>VisRecTrans.create_model</code><a href="https://github.com/Ys-Prakash/transcv/tree/master/transcv/visrectrans.py#L156" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>VisRecTrans.create_model</code>()</p>
+<h4 id="VisRecTrans.create_model" class="doc_header"><code>VisRecTrans.create_model</code><a href="https://github.com/Ys-Prakash/transcv/tree/master/transcv/visrectrans.py#L153" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>VisRecTrans.create_model</code>()</p>
 </blockquote>
 <p>Method for creating the model.</p>
 
@@ -101,13 +99,11 @@ nb_path: "00_visrectrans.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="VisRecTrans.initialize" class="doc_header"><code>VisRecTrans.initialize</code><a href="https://github.com/Ys-Prakash/transcv/tree/master/transcv/visrectrans.py#L161" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>VisRecTrans.initialize</code>(<strong><code>model</code></strong>)</p>
+<h4 id="VisRecTrans.initialize" class="doc_header"><code>VisRecTrans.initialize</code><a href="https://github.com/Ys-Prakash/transcv/tree/master/transcv/visrectrans.py#L158" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>VisRecTrans.initialize</code>(<strong><code>model</code></strong>)</p>
 </blockquote>
-<p>Mthod for initializing the model. This method uses truncated normal distribution for
+<p>Mthod for initializing the given <code>model</code>. This method uses truncated normal distribution for
 initializing the position embedding as well as the class token, and, kaiming normal
 distribution for the initializing the head of the model.</p>
-<p>Attributes :
-    model : The model to be initialized</p>
 
 </div>
 
@@ -171,8 +167,7 @@ distribution for the initializing the head of the model.</p>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The list of models supported by the <a href="/transcv/visrectrans.html#VisRecTrans"><code>VisRecTrans</code></a> API :</p>
-
+<h4 id="The-list-of-models-supported-by-the-VisRecTrans-API-:">The list of models supported by the <a href="/transcv/visrectrans.html#VisRecTrans"><code>VisRecTrans</code></a> API :<a class="anchor-link" href="#The-list-of-models-supported-by-the-VisRecTrans-API-:"> </a></h4>
 </div>
 </div>
 </div>

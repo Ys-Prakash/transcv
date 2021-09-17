@@ -10,35 +10,33 @@ from fastai.vision.all import *
 
 # Cell
 class DETR :
-    """Class for setting up a detection transformer for object detection.
-
-    Attributes :
-        img_path : Path to the image
+    """Class for setting up a Detection Transformer (DETR).
     """
 
-    def __init__ (self, img_path) :
-        self.img_path = img_path
-        self.test_img = PILImage.create(self.img_path)
+    def __init__ (self) :
+        self.feature_extractor = DetrFeatureExtractor.from_pretrained('facebook/detr-resnet-50')
+        self.model = DetrForObjectDetection.from_pretrained('facebook/detr-resnet-50')
 
-    def get_detr (self) :
-        """Method for getting the detr model.
+    def infer (self, img_paths):
+        """Method for getting the bounding boxes and the predicted class logits. This method takes in a list of paths of images (`img_paths`) and
+        returns a list of outputs.
         """
-        feature_extractor = DetrFeatureExtractor.from_pretrained('facebook/detr-resnet-50')
-        model = DetrForObjectDetection.from_pretrained('facebook/detr-resnet-50')
-        return feature_extractor, model
+        if isinstance(img_paths, list) :
+            outputs = []
+            for path in img_paths :
+                img = PILImage.create(path)
+                input = self.feature_extractor(img, return_tensors = 'pt')
+                output = self.model(**input)
+                outputs.append(output)
+                return outputs
+        else :
+            img = PILImage.create(img_paths)
+            input = self.feature_extractor(img, return_tensors = 'pt')
+            output = self.model(**input)
+            return output
 
-    def infer (self, feature_extractor, model):
-        """Mthod for getting the bounding boxes.
-
-        Attributes :
-            feature_extractor : The feature extractor, which is returned by the `get_dter` method
-            model : The detr model, returned by the `get_detr` method
+    def show_image (self, img_path) :
+        """Method to display the image, for the given image path (`img_path`).
         """
-        input = feature_extractor(self.test_img, return_tensors = 'pt')
-        output = model(**input)
-        return output
-
-    def show_image (self) :
-        """Method to display the image
-        """
-        self.test_img.show()
+        img = PILImage.create(img_path)
+        img.show()

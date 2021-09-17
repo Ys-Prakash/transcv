@@ -8,7 +8,7 @@
 
 ## How to use
 
-1. An example for using the VisRecTrans API for getting a custom ViT model :
+### An example for using the VisRecTrans API for getting a custom ViT model :
 
 ```python
 from transcv.visrectrans import VisRecTrans
@@ -20,9 +20,9 @@ model = vis_rec_ob.create_model()
 vis_rec_ob.initialize(model)
 ```
 
-Now, the `model` can be used with the `Learner` API, of fastai, and can be fine-tuned on any dataset.
+Now, the `model` can be used with the `Learner` API, of fastai, and can be fine-tuned on any dataset. For the details of the visual recognition part, please see `VisRecTrans`.
 
-2. An example for using the VisRecTrans API for object detection :
+### An example for using the VisRecTrans API for object detection :
 
 ```python
 from transcv.detr import DETR
