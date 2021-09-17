@@ -1,6 +1,7 @@
 {
   "transcv": {
     "Overview": "/",
-    "VisRecTrans": "visrectrans.html"
+    "VisRecTrans": "visrectrans.html",
+    "DETR": "detr.html"
   }
 }

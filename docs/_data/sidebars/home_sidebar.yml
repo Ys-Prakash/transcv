@@ -12,6 +12,9 @@ entries:
     - output: web,pdf
       title: VisRecTrans
       url: visrectrans.html
+    - output: web,pdf
+      title: DETR
+      url: detr.html
     output: web
     title: transcv
   output: web
