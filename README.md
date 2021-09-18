@@ -1,13 +1,6 @@
 # transcv
-> A library for creating custom vision transformers for computer vision problems
+> A library for creating custom vision transformers for computer vision
 
-## Acknowledgement
-
-1. [Ross Wightman's repository for vision transformer](https://github.com/rwightman/pytorch-image-models/blob/master/timm/models/vision_transformer.py)
-2. [Hugging Face](https://huggingface.co/models)
-3. [DETR github repository](https://github.com/facebookresearch/detr) 
-4. [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](https://arxiv.org/abs/2010.11929)
-5. [fastai](https://docs.fast.ai/)
 
 ## Install
 
@@ -15,7 +8,7 @@
 
 ## How to use
 
-### An example for using the VisRecTrans API for getting a custom ViT model :
+### An example for using the VisRecTrans class for getting a custom ViT model :
 
 ```python
 from transcv.visrectrans import VisRecTrans
@@ -27,9 +20,9 @@ model = vis_rec_ob.create_model()
 vis_rec_ob.initialize(model)
 ```
 
-Now, the `model` can be used with the [Learner](https://docs.fast.ai/learner.html#Learner) API, of [fastai](https://docs.fast.ai), and can be fine-tuned on any dataset.
+Now, the `model` can be used with the [Learner](https://docs.fast.ai/learner.html#Learner) class, of [fastai](https://docs.fast.ai), and can be fine-tuned on any dataset. For the details of the visual recognition part, please see `VisRecTrans`.
 
-### An example for using the VisRecTrans API for object detection :
+### An example for using the DETR class for object detection :
 
 ```python
 from transcv.detr import DETR
@@ -156,4 +149,4 @@ output.pred_boxes
 
 
 
-For a detailed description of the APIs, please see the [documentation](https://ys-prakash.github.io/transcv/)
+For more details of the object detection part, please see `DETR`.
