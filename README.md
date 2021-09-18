@@ -1,6 +1,13 @@
 # transcv
 > A library for creating custom vision transformers for computer vision problems
 
+## Acknowledgement
+
+1. [Ross Wightman's repository for vision transformer](https://github.com/rwightman/pytorch-image-models/blob/master/timm/models/vision_transformer.py)
+2. [Hugging Face](https://huggingface.co/models)
+3. [DETR github repository](https://github.com/facebookresearch/detr) 
+4. [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](https://arxiv.org/abs/2010.11929)
+5. [fastai](https://docs.fast.ai/)
 
 ## Install
 
