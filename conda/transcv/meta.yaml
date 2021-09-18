@@ -1,0 +1,38 @@
+package:
+  name: transcv
+  version: 0.0.1
+source:
+  sha256: 3aac11e4d33614362c5a47ee09cffe8b7884d2bf502fabad80ba1bed8a53d2d9
+  url: https://files.pythonhosted.org/packages/4e/74/5eb6b5346eab30919b731a8e00431eaf6db4a6915df773ed4e9477431baa/transcv-0.0.1.tar.gz
+about:
+  dev_url: https://Ys-Prakash.github.io
+  doc_url: https://Ys-Prakash.github.io
+  home: https://Ys-Prakash.github.io
+  license: Apache Software
+  license_family: APACHE
+  summary: A library for creating vision transformers for computer vision
+build:
+  noarch: python
+  number: '0'
+  script: '{{ PYTHON }} -m pip install . -vv'
+extra:
+  recipe-maintainers:
+  - Ys-Prakash
+requirements:
+  host:
+  - pip
+  - python
+  - packaging
+  - fastai
+  - timm
+  - transformers[sentencepiece]
+  run:
+  - pip
+  - python
+  - packaging
+  - fastai
+  - timm
+  - transformers[sentencepiece]
+test:
+  imports:
+  - transcv
