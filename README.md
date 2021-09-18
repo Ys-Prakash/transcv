@@ -27,7 +27,7 @@ model = vis_rec_ob.create_model()
 vis_rec_ob.initialize(model)
 ```
 
-Now, the `model` can be used with the [Learner](https://docs.fast.ai/learner.html#Learner) API, of [fastai](https://docs.fast.ai), and can be fine-tuned on any dataset. For the details of the visual recognition part, please see `VisRecTrans`.
+Now, the `model` can be used with the [Learner](https://docs.fast.ai/learner.html#Learner) API, of [fastai](https://docs.fast.ai), and can be fine-tuned on any dataset.
 
 ### An example for using the VisRecTrans API for object detection :
 
@@ -156,4 +156,4 @@ output.pred_boxes
 
 
 
-For more details of the object detection part, please see `DETR`
+For a detailed description of the APIs, please see the [documentation](https://ys-prakash.github.io/transcv/)
