@@ -157,8 +157,8 @@ class VisRecTrans :
 
     def initialize (self, model) :
         """Mthod for initializing the given `model`. This method uses truncated normal distribution for
-        initializing the position embedding as well as the class token, and, kaiming normal
-        distribution for the initializing the head of the model.
+        initializing the position embedding as well as the class token, and, the head of the model is
+        initialized using He initialization.
         """
         trunc_normal_(model[1], 'cls_tokens')
         trunc_normal_(model[1], 'pos_embeds')

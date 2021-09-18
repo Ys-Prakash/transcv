@@ -6,8 +6,8 @@ title: VisRecTrans
 keywords: fastai
 sidebar: home_sidebar
 
-summary: "An API for creating a custom <a href='https://arxiv.org/abs/2010.11929'>Vision Transformer (ViT)</a> model for visual recognition, that can be used with the `Learner` API of fastai."
-description: "An API for creating a custom <a href='https://arxiv.org/abs/2010.11929'>Vision Transformer (ViT)</a> model for visual recognition, that can be used with the `Learner` API of fastai."
+summary: "An API for creating a custom <a href='https://arxiv.org/abs/2010.11929'>Vision Transformer (ViT)</a> model for visual recognition."
+description: "An API for creating a custom <a href='https://arxiv.org/abs/2010.11929'>Vision Transformer (ViT)</a> model for visual recognition."
 nb_path: "00_visrectrans.ipynb"
 ---
 <!--
@@ -102,8 +102,8 @@ is set to False.</p>
 <h4 id="VisRecTrans.initialize" class="doc_header"><code>VisRecTrans.initialize</code><a href="https://github.com/Ys-Prakash/transcv/tree/master/transcv/visrectrans.py#L158" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>VisRecTrans.initialize</code>(<strong><code>model</code></strong>)</p>
 </blockquote>
 <p>Mthod for initializing the given <code>model</code>. This method uses truncated normal distribution for
-initializing the position embedding as well as the class token, and, kaiming normal
-distribution for the initializing the head of the model.</p>
+initializing the position embedding as well as the class token, and, the head of the model is
+initialized using He initialization.</p>
 
 </div>
 
@@ -160,7 +160,7 @@ distribution for the initializing the head of the model.</p>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As we see, the model is a sequential list of modules, and can be used with the <code>Learner</code> API of fastai, as we use any other model.</p>
+<p>As we see, the model is a sequential list of layers, and can be used with the <code>Learner</code> API of <a href="https://docs.fast.ai">fastai</a>, as we use any other model.</p>
 
 </div>
 </div>
