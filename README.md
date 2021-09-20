@@ -6,6 +6,10 @@
 
 `pip install transcv`
 
+Along with transcv, we also need fastai and nbdev. So, it is recommended to use :
+
+`pip install fastai nbdev transcv -q --upgrade`
+
 ## How to use
 
 ### An example for using the VisRecTrans class for getting a custom ViT model :
