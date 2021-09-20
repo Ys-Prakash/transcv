@@ -16,7 +16,7 @@ entries:
       title: DETR
       url: detr.html
     - output: web,pdf
-      title: '**1. Installing the libraries**'
+      title: A tutorial for VisRecTrans class
       url: A_tutorial_for_VisRecTrans.html
     output: web
     title: transcv

@@ -10,11 +10,11 @@
 
 ### An example for using the VisRecTrans class for getting a custom ViT model :
 
-```
+```python
 from transcv.visrectrans import VisRecTrans
 ```
 
-```
+```python
 vis_rec_ob = VisRecTrans('vit_small_patch16_224', 10, False)
 model = vis_rec_ob.create_model()
 vis_rec_ob.initialize(model)
@@ -24,22 +24,22 @@ Now, the `model` can be used with the [Learner](https://docs.fast.ai/learner.htm
 
 ### An example for using the DETR class for object detection :
 
-```
+```python
 from transcv.detr import DETR
 ```
 
-```
+```python
 path = untar_data(URLs.PASCAL_2007)
 ```
 
-```
+```python
 #hide_output
 detr_ob = DETR()
 files = get_image_files(path/'test')
 output = detr_ob.infer(files[0])
 ```
 
-```
+```python
 output.pred_boxes
 ```
 

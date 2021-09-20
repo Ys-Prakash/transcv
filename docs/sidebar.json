@@ -3,6 +3,6 @@
     "Overview": "/",
     "VisRecTrans": "visrectrans.html",
     "DETR": "detr.html",
-    "**1. Installing the libraries**": "A_tutorial_for_VisRecTrans.html"
+    "A tutorial for VisRecTrans class": "A_tutorial_for_VisRecTrans.html"
   }
 }
