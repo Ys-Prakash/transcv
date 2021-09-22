@@ -2,6 +2,7 @@
   "transcv": {
     "Overview": "/",
     "VisRecTrans": "visrectrans.html",
-    "DETR": "detr.html"
+    "DETR": "detr.html",
+    "A tutorial for VisRecTrans class": "A_tutorial_for_VisRecTrans.html"
   }
 }
