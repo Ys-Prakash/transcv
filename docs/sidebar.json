@@ -1,8 +1,12 @@
 {
-  "transcv": {
-    "Overview": "/",
-    "VisRecTrans": "visrectrans.html",
-    "DETR": "detr.html",
-    "A tutorial for VisRecTrans": "A_tutorial_for_VisRecTrans.html"
-  }
+	"Getting started": {
+		"Overview": "/"
+	},
+	"Visual recognition": {
+		"VisRecTrans": "visrectrans.html",
+		"A tutorial for VisRecTrans": "A_tutorial_for_VisRecTrans.html"
+	},
+	"Object detection": {
+		"DETR": "detr.html"
+	}
 }

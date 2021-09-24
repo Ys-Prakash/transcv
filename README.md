@@ -2,15 +2,6 @@
 > A library for creating custom vision transformers for computer vision
 
 
-## Acknowledgement
-
-1. [Ross Wightman's repository for vision transformer](https://github.com/rwightman/pytorch-image-models/blob/master/timm/models/vision_transformer.py)
-2. [Hugging Face](https://huggingface.co/models)
-3. [DETR repository](https://github.com/facebookresearch/detr)
-4. [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](https://arxiv.org/abs/2010.11929)
-5. [fastai](https://docs.fast.ai/)
-6. [nbdev](https://nbdev.fast.ai/)
-
 ## Install
 
 `pip install transcv`
@@ -33,7 +24,7 @@ model = vis_rec_ob.create_model()
 vis_rec_ob.initialize(model)
 ```
 
-Now, the `model` can be used with the [Learner](https://docs.fast.ai/learner.html#Learner) class, of [fastai](https://docs.fast.ai), and can be fine-tuned on any dataset.
+Now, the `model` can be used with the [Learner](https://docs.fast.ai/learner.html#Learner) class, of [fastai](https://docs.fast.ai), and can be fine-tuned on any dataset. For the details of the visual recognition part, please see `VisRecTrans`.
 
 ### An example for using the DETR class for object detection :
 
@@ -162,4 +153,4 @@ output.pred_boxes
 
 
 
-For a detailed description of the classes and methods, please refer to the [documentation](https://ys-prakash.github.io/transcv/).
+For more details of the object detection part, please see `DETR`.

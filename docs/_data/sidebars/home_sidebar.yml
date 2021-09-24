@@ -9,16 +9,22 @@ entries:
     - output: web,pdf
       title: Overview
       url: /
+    output: web
+    title: Getting started
+  - folderitems:
     - output: web,pdf
       title: VisRecTrans
       url: visrectrans.html
     - output: web,pdf
-      title: DETR
-      url: detr.html
-    - output: web,pdf
       title: A tutorial for VisRecTrans
       url: A_tutorial_for_VisRecTrans.html
     output: web
-    title: transcv
+    title: Visual recognition
+  - folderitems:
+    - output: web,pdf
+      title: DETR
+      url: detr.html
+    output: web
+    title: Object detection
   output: web
   title: Sidebar
