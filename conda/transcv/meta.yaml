@@ -1,9 +1,9 @@
 package:
   name: transcv
-  version: 0.0.2
+  version: 0.0.3
 source:
-  sha256: 6a5015c2db9122dddef0d347dfb5e879ad85d8563b52bf855244fb1dbcc39621
-  url: https://files.pythonhosted.org/packages/5c/fa/2e90dd5346e01b2dc6a3f0ef6ac8767a284a8749fde5bc45789af6b122a2/transcv-0.0.2.tar.gz
+  sha256: 4e33ca072a0d6dd5ff9e70b58a526f0f8698e6c3435b3e9885eaa6a022be5840
+  url: https://files.pythonhosted.org/packages/a5/bd/14a487fcbfd7c442541f52d4bb78cb3dcc580cde09cea110d6c97ca802ec/transcv-0.0.3.tar.gz
 about:
   dev_url: https://Ys-Prakash.github.io
   doc_url: https://Ys-Prakash.github.io
