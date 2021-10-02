@@ -168,7 +168,12 @@ class VisRecTrans :
         to use the callback, returned by this method, while training a ViT model.
         """
         class TrainEmbedCallback(Callback) :
-            def before_epoch(self) :
+            def before_train(self) :
                 self.model[1].training = True
                 self.model[1].requires_grad_(True)
-        return TrainEmbedCallback
+
+            def before_validation(self) :
+                self.model[1].training = False
+                self.model[1].requires_grad_(False)
+
+        return TrainEmbedCallback()
