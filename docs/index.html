@@ -95,6 +95,7 @@ nb_path: "index.ipynb"
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">vis_rec_ob</span> <span class="o">=</span> <span class="n">VisRecTrans</span><span class="p">(</span><span class="s1">&#39;vit_small_patch16_224&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">vis_rec_ob</span><span class="o">.</span><span class="n">create_model</span><span class="p">()</span>
 <span class="n">vis_rec_ob</span><span class="o">.</span><span class="n">initialize</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+<span class="n">embed_callback</span> <span class="o">=</span> <span class="n">vis_rec_ob</span><span class="o">.</span><span class="n">get_callback</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -106,7 +107,7 @@ nb_path: "index.ipynb"
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now, the <code>model</code> can be used with the <a href="https://docs.fast.ai/learner.html#Learner">Learner</a> class, of <a href="https://docs.fast.ai">fastai</a>, and can be fine-tuned on any dataset. For the details of the visual recognition part, please see <a href="/transcv/visrectrans.html#VisRecTrans"><code>VisRecTrans</code></a>.</p>
+<p>Now, the <code>model</code>, along with the <code>embed_callback</code>, can be used with the <a href="https://docs.fast.ai/learner.html#Learner">Learner</a> class, of <a href="https://docs.fast.ai">fastai</a>, and can be fine-tuned on any dataset. For the details of the visual recognition part, please see <a href="/transcv/visrectrans.html#VisRecTrans"><code>VisRecTrans</code></a>.</p>
 
 </div>
 </div>

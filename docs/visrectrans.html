@@ -40,7 +40,7 @@ nb_path: "00_visrectrans.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="VisRecTrans" class="doc_header"><code>class</code> <code>VisRecTrans</code><a href="https://github.com/Ys-Prakash/transcv/tree/master/transcv/visrectrans.py#L116" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>VisRecTrans</code>(<strong><code>model_name</code></strong>, <strong><code>num_classes</code></strong>, <strong><code>pretrained</code></strong>=<em><code>True</code></em>)</p>
+<h2 id="VisRecTrans" class="doc_header"><code>class</code> <code>VisRecTrans</code><a href="https://github.com/Ys-Prakash/transcv/tree/master/transcv/visrectrans.py#L115" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>VisRecTrans</code>(<strong><code>model_name</code></strong>, <strong><code>num_classes</code></strong>, <strong><code>pretrained</code></strong>=<em><code>True</code></em>)</p>
 </blockquote>
 <p>Class for setting up a vision transformer for visual recognition.
 Returns a pretrained custom ViT model for the given <code>model_name</code> and <code>num_classes</code>, by default, or, with randomly initialized parameters, if <code>pretrained</code>
@@ -74,7 +74,7 @@ is set to False.</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="VisRecTrans.create_model" class="doc_header"><code>VisRecTrans.create_model</code><a href="https://github.com/Ys-Prakash/transcv/tree/master/transcv/visrectrans.py#L153" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>VisRecTrans.create_model</code>()</p>
+<h4 id="VisRecTrans.create_model" class="doc_header"><code>VisRecTrans.create_model</code><a href="https://github.com/Ys-Prakash/transcv/tree/master/transcv/visrectrans.py#L152" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>VisRecTrans.create_model</code>()</p>
 </blockquote>
 <p>Method for creating the model.</p>
 
@@ -99,11 +99,37 @@ is set to False.</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="VisRecTrans.initialize" class="doc_header"><code>VisRecTrans.initialize</code><a href="https://github.com/Ys-Prakash/transcv/tree/master/transcv/visrectrans.py#L158" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>VisRecTrans.initialize</code>(<strong><code>model</code></strong>)</p>
+<h4 id="VisRecTrans.initialize" class="doc_header"><code>VisRecTrans.initialize</code><a href="https://github.com/Ys-Prakash/transcv/tree/master/transcv/visrectrans.py#L157" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>VisRecTrans.initialize</code>(<strong><code>model</code></strong>)</p>
 </blockquote>
 <p>Mthod for initializing the given <code>model</code>. This method uses truncated normal distribution for
 initializing the position embedding as well as the class token, and, the head of the model is
 initialized using He initialization.</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="VisRecTrans.get_callback" class="doc_header"><code>VisRecTrans.get_callback</code><a href="https://github.com/Ys-Prakash/transcv/tree/master/transcv/visrectrans.py#L166" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>VisRecTrans.get_callback</code>()</p>
+</blockquote>
+<p>Method for getting the callback to train the embedding block of the <code>model</code>. It is highly recommended
+to use the callback, returned by this method, while training a ViT model.</p>
 
 </div>
 

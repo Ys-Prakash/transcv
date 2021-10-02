@@ -12,7 +12,6 @@ import warnings
 
 # Cell
 #hide
-# Heavily inspired by "https://github.com/rwightman/pytorch-image-models/blob/5f9aff395c224492e9e44248b15f44b5cc095d9c/timm/models/vision_transformer.py"
 
 class EmbedBlock (Module) :
   def __init__ (self, num_patches, embed_dim) :
@@ -28,7 +27,6 @@ class EmbedBlock (Module) :
 
 # Cell
 #hide
-# Heavily inspired by "https://github.com/rwightman/pytorch-image-models/blob/5f9aff395c224492e9e44248b15f44b5cc095d9c/timm/models/vision_transformer.py"
 
 class Header (Module) :
   def __init__ (self, ni, num_classes) :
@@ -41,6 +39,7 @@ class Header (Module) :
 
 # Cell
 #hide
+
 def custom_ViT (timm_model_name, num_patches, embed_dim, ni, num_classes, pretrained = True) :
   model = timm.create_model(timm_model_name, pretrained)
   module_layers = list(model.children())
@@ -53,7 +52,7 @@ def custom_ViT (timm_model_name, num_patches, embed_dim, ni, num_classes, pretra
 
 # Cell
 #hide
-# Heavily inspired by "https://github.com/rwightman/pytorch-image-models/blob/5f9aff395c224492e9e44248b15f44b5cc095d9c/timm/models/vision_transformer.py"
+# The function below is heavily inspired by "https://github.com/rwightman/pytorch-image-models/blob/5f9aff395c224492e9e44248b15f44b5cc095d9c/timm/models/vision_transformer.py"
 
 def _no_grad_trunc_normal_(tensor, mean, std, a, b):
     # Cut & paste from PyTorch official master until it's in a few official releases - RW
@@ -163,3 +162,13 @@ class VisRecTrans :
         trunc_normal_(model[1], 'cls_tokens')
         trunc_normal_(model[1], 'pos_embeds')
         apply_init(model[3], nn.init.kaiming_normal_)
+
+    def get_callback (self) :
+        """Method for getting the callback to train the embedding block of the `model`. It is highly recommended
+        to use the callback, returned by this method, while training a ViT model.
+        """
+        class TrainEmbedCallback(Callback) :
+            def before_epoch(self) :
+                self.model[1].training = True
+                self.model[1].requires_grad_(True)
+        return TrainEmbedCallback
