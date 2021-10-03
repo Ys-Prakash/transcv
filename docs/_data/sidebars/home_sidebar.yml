@@ -17,7 +17,7 @@ entries:
       url: visrectrans.html
     - output: web,pdf
       title: A tutorial for VisRecTrans
-      url: A_tutorial_for_VisRecTrans.html
+      url: Tutorial.html
     output: web
     title: Visual recognition
   - folderitems:

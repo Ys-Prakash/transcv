@@ -4,7 +4,7 @@
 	},
 	"Visual recognition": {
 		"VisRecTrans": "visrectrans.html",
-		"A tutorial for VisRecTrans": "A_tutorial_for_VisRecTrans.html"
+		"A tutorial for VisRecTrans": "Tutorial.html"
 	},
 	"Object detection": {
 		"DETR": "detr.html"
