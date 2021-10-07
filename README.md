@@ -25,7 +25,7 @@ vis_rec_ob.initialize(model)
 embed_callback = vis_rec_ob.get_callback()
 ```
 
-Now, the `model`, along with the `embed_callback`, can be used with the [Learner](https://docs.fast.ai/learner.html#Learner) class, of [fastai](https://docs.fast.ai), and can be fine-tuned on any dataset. For the details of the visual recognition part, please see `VisRecTrans`.
+Now, the `model`, along with the `embed_callback`, can be used with the [Learner](https://docs.fast.ai/learner.html#Learner) class, of [fastai](https://docs.fast.ai), and can be fine-tuned on any image classification dataset. For the details of the visual recognition part, please see `VisRecTrans`.
 
 ### An example for using the SwinT class for building a Swin transformer model :
 
