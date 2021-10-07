@@ -18,13 +18,10 @@ entries:
     - output: web,pdf
       title: A tutorial for VisRecTrans
       url: Tutorial.html
+    - output: web,pdf
+      title: SwinT
+      url: swin.html
     output: web
     title: Visual recognition
-  - folderitems:
-    - output: web,pdf
-      title: DETR
-      url: detr.html
-    output: web
-    title: Object detection
   output: web
   title: Sidebar

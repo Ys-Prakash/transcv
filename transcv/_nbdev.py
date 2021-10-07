@@ -7,10 +7,10 @@ index = {"EmbedBlock": "00_visrectrans.ipynb",
          "custom_ViT": "00_visrectrans.ipynb",
          "trunc_normal_": "00_visrectrans.ipynb",
          "VisRecTrans": "00_visrectrans.ipynb",
-         "DETR": "01_detr.ipynb"}
+         "SwinT": "01_swin.ipynb"}
 
 modules = ["visrectrans.py",
-           "detr.py"]
+           "swin.py"]
 
 doc_url = "https://Ys-Prakash.github.io/transcv/"
 
