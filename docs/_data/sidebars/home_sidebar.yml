@@ -21,6 +21,9 @@ entries:
     - output: web,pdf
       title: SwinT
       url: swin.html
+    - output: web,pdf
+      title: A tutorial for SwinT
+      url: SwinT_tutorial.html
     output: web
     title: Visual recognition
   output: web
