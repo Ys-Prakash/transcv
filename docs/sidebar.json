@@ -5,6 +5,7 @@
 	"Visual recognition": {
 		"VisRecTrans": "visrectrans.html",
 		"A tutorial for VisRecTrans": "Tutorial.html",
-		"SwinT": "swin.html"
+		"SwinT": "swin.html",
+		"A tutorial for SwinT": "SwinT_tutorial.html"
 	}
 }
