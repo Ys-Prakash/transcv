@@ -1,5 +1,5 @@
 # transcv
-> A library for creating custom vision transformers for computer vision
+> transcv creates vision transformers for visual recognition which can be pre-trained using self-supervised learning 
 
 
 ## Install
@@ -27,7 +27,7 @@ embed_callback = vis_rec_ob.get_callback()
 
 Now, the `model`, along with the `embed_callback`, can be used with the [Learner](https://docs.fast.ai/learner.html#Learner) class, of [fastai](https://docs.fast.ai), and can be fine-tuned on any dataset. For the details of the visual recognition part, please see `VisRecTrans`.
 
-### An example for using the SwinT class for visual recognition :
+### An example for using the SwinT class for building a Swin transformer model :
 
 ```python
 from transcv.swin import SwinT
@@ -39,4 +39,4 @@ swin_model = swint_ob.get_model()
 assert isinstance(swin_model, nn.Sequential)
 ```
 
-Now, the `swin_model` can be used with the [Learner](https://docs.fast.ai/learner.html#Learner) class, of [fastai](https://docs.fast.ai), and can be fine-tuned on any dataset. For more details of the Swin transformer model, please see `SwinT`.
+Now, the `swin_model` can be used with the [Learner](https://docs.fast.ai/learner.html#Learner) class, of [fastai](https://docs.fast.ai), and can be fine-tuned on any dataset for visual recognition tak. For the details of the Swin transformer model, please see `SwinT`.

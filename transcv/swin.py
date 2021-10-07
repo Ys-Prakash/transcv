@@ -11,7 +11,7 @@ from fastai.vision.all import *
 # Cell
 class SwinT :
     """Class for setting up a Swin Transformer model. The architecture is specified by `arch`, and the
-    number of classes is specified by `num_classes`. Returns a pretrained model, by default, or a randomly
+    number of classes is specified by `num_classes`. Returns a pretrained model, by default, or an
     initialised model if `pretrained` is set to `False`.
     """
 
