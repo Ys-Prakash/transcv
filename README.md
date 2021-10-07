@@ -39,4 +39,4 @@ swin_model = swint_ob.get_model()
 assert isinstance(swin_model, nn.Sequential)
 ```
 
-Now, the `swin_model` can be used with the [Learner](https://docs.fast.ai/learner.html#Learner) class, of [fastai](https://docs.fast.ai), and can be fine-tuned on any dataset for visual recognition tak. For the details of the Swin transformer model, please see `SwinT`.
+Now, the `swin_model` can be used with the [Learner](https://docs.fast.ai/learner.html#Learner) class, of [fastai](https://docs.fast.ai), and can be fine-tuned on any dataset for visual recognition task. For the details of the Swin transformer model, please see `SwinT`.
