@@ -26,5 +26,14 @@ entries:
       url: SwinT_tutorial.html
     output: web
     title: Visual recognition
+  - folderitems:
+    - output: web,pdf
+      title: SimCLR
+      url: A tutorial for SimCLR.html
+    - output: web,pdf
+      title: SwAV
+      url: Tutorial for SwAV.html
+    output: web
+    title: Self-supervised learning with ViT
   output: web
   title: Sidebar

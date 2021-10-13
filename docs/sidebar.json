@@ -7,5 +7,9 @@
 		"A tutorial for VisRecTrans": "Tutorial.html",
 		"SwinT": "swin.html",
 		"A tutorial for SwinT": "SwinT_tutorial.html"
+	},
+	"Self-supervised learning with ViT": {
+		"SimCLR": "A tutorial for SimCLR.html",
+		"SwAV": "Tutorial for SwAV.html"
 	}
 }
