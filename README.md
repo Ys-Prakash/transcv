@@ -14,11 +14,11 @@ Along with transcv, we also need fastai and nbdev. So, it is recommended to use 
 
 ### An example for using the VisRecTrans class for getting a custom ViT model :
 
-```
+```python
 from transcv.visrectrans import VisRecTrans
 ```
 
-```
+```python
 vis_rec_ob = VisRecTrans('vit_small_patch16_224', 10, False)
 model = vis_rec_ob.create_model()
 vis_rec_ob.initialize(model)
@@ -29,14 +29,16 @@ Now, the `model`, along with the `embed_callback`, can be used with the [Learner
 
 ### An example for using the SwinT class for building a Swin transformer model :
 
-```
+```python
 from transcv.swin import SwinT
 ```
 
-```
+```python
 swint_ob = SwinT('swin_base_patch4_window7_224', pretrained = False, num_classes = 10)
 swin_model = swint_ob.get_model()
 assert isinstance(swin_model, nn.Sequential)
 ```
 
 Now, the `swin_model` can be used with the [Learner](https://docs.fast.ai/learner.html#Learner) class, of [fastai](https://docs.fast.ai), and can be fine-tuned on any dataset for visual recognition task. For the details of the Swin transformer model, please see `SwinT`.
+
+For self-supervised learning tutorials, please see `Self-supervised learning with ViT`.
